@@ -27,10 +27,10 @@ public class Ugyfelkiszolgalo implements Runnable{
                     varos = ugyfeltol.readUTF();
                     menu=ugyfeltol.readInt();
                     switch (menu){
-                        case 1: ugyfelnek.writeUTF(napiMin(varos)); break;
-                        case 2: ugyfelnek.writeUTF(napiMax(varos)); break;
-                        case 3: ugyfelnek.writeUTF(holnapMin(varos)); break;
-                        case 4: ugyfelnek.writeUTF(holnapMax(varos)); break;
+                        case 1: ugyfelnek.writeUTF("Mai napi min hőmérséklet a kiválasztott városban: "+napiMin(varos)); break;
+                        case 2: ugyfelnek.writeUTF("Mai napi max hőmérséklet a kiválasztott városban: "+napiMax(varos)); break;
+                        case 3: ugyfelnek.writeUTF("Holnapi min hőmérséklet a kiválasztott városban: "+holnapMin(varos)); break;
+                        case 4: ugyfelnek.writeUTF("Holnapi max hőmérséklet a kiválasztott városban: "+holnapMax(varos)); break;
                         case 5: ugyfelnek.writeUTF(varosAdatok(varos));break;
                         case 6: ugyfelnek.writeUTF("Ön a kilépést választotta");
                     }
